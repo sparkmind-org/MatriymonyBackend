@@ -7,8 +7,10 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Column;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.JoinColumn;
+import lombok.Data;
 
 @Entity
+@Data
 public class Carrier {
 
     @Id
@@ -33,51 +35,4 @@ public class Carrier {
 
     // Getters and Setters
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Profile getProfile() {
-        return profile;
-    }
-
-    public void setProfile(Profile profile) {
-        this.profile = profile;
-    }
-
-    public String getEarnings() {
-        return earnings;
-    }
-
-    public void setEarnings(String earnings) {
-        this.earnings = earnings;
-    }
-
-    public String getEmployedIn() {
-        return employedIn;
-    }
-
-    public void setEmployedIn(String employedIn) {
-        this.employedIn = employedIn;
-    }
-
-    public String getOrganizationName() {
-        return organizationName;
-    }
-
-    public void setOrganizationName(String organizationName) {
-        this.organizationName = organizationName;
-    }
-
-    public String getOccupation() {
-        return occupation;
-    }
-
-    public void setOccupation(String occupation) {
-        this.occupation = occupation;
-    }
 }
