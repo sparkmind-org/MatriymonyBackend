@@ -1,5 +1,6 @@
 package com.example.MatrimonyApplication.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.GeneratedValue;
@@ -19,6 +20,7 @@ public class Carrier {
 
     @ManyToOne
     @JoinColumn(name = "profile_id", nullable = false)
+    @JsonBackReference
     private Profile profile;
 
     @Column(nullable = true)

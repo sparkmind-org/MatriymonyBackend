@@ -1,11 +1,11 @@
 package com.example.MatrimonyApplication.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Column;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import jakarta.persistence.*;
 import lombok.Data;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Data
@@ -29,5 +29,12 @@ public class Profile {
     @Column(nullable = false)
     private LocalDateTime lastLoggedIn;
 
+     @OneToMany(mappedBy = "profile")
+     @JsonManagedReference
+    private List<Carrier> carriers;
+
+    @OneToOne(mappedBy = "profile", cascade = CascadeType.ALL)
+    @JsonManagedReference
+    private ProfileInfo profileInfo;
     // Getters and Setters
 }

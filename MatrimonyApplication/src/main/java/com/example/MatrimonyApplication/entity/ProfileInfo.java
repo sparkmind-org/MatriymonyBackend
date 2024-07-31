@@ -1,5 +1,6 @@
 package com.example.MatrimonyApplication.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -11,8 +12,9 @@ public class ProfileInfo {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne
+    @OneToOne
     @JoinColumn(name = "profile_id", nullable = false)
+    @JsonBackReference
     private Profile profile;
 
     @Column(nullable = false)
