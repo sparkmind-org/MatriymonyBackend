@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/profile-matches")
+@RequestMapping("/profileMatches")
 public class ProfileMatchController {
 
     @Autowired
