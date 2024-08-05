@@ -1,5 +1,6 @@
 package com.education.profileeducationdetails.DAO;
 
+import com.education.profileeducationdetails.enities.FavouriteTracking;
 import com.education.profileeducationdetails.enities.ProfileEducation;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
